@@ -15,6 +15,9 @@ fun String.md5() = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteA
     .toString(16)
     .padStart(32, '0')
 
+// Split a string on a given delimiter and convert to longs
+fun String.splitToLongs(delimiter: String = " ") = split(delimiter).map { it.toLong() }
+
 /**
  * The cleaner shorthand for printing output.
  */
